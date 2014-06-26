@@ -100,8 +100,9 @@ describe("html fetcher helpers", function(){
       function() { return resultArray; },
       function(){
         expect(resultArray).to.deep.equal(urlArray);
+        // expect(archive.isUrlInList('example1.com')).to.equal(true);
         done();
-    });
+      });
   });
 
   it("should have a 'downloadUrls' function", function(){

@@ -32,11 +32,15 @@ exports.readListOfUrls = function(callback){
     } else{
       var arr = data.split("\n");
       callback(arr);
+      console.log(arr);
     }
   });
 };
 
-exports.isUrlInList = function(){
+exports.isUrlInList = function(url){
+  this.readListOfUrls(function(array){
+    return array.indexOf(url) !== -1;
+  });
 };
 
 exports.addUrlToList = function(){
