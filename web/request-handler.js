@@ -36,8 +36,8 @@ exports.handleRequest = function (req, res) {
         if (err) {
           console.log(pathName);
           statusCode = 404;
-          res.writeHead(statusCode);
-          res.end("You dun fucked up");
+          res.writeHead(statusCode, {'Content-Type': 'text/html'});
+          res.end("This link or site doesn't exist in our archive!");
         } else {
           statusCode = 200;
           res.writeHead(statusCode, {'Content-Type': 'text/html'});
